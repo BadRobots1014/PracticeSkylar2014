@@ -6,7 +6,7 @@ package com.practiceRobot.interfaces;
 
 /**
  *
- * @author rsinghal
+ * @author Manu S.
  */
 public interface Logger {
     

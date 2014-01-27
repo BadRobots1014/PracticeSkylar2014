@@ -10,6 +10,10 @@ package com.practiceRobot.subsystems.interfaces;
  */
 public interface Logger {
     
+    /**
+     * Prints stuff into the console.
+     * @param out whatever you want to say
+     */
     public void log(String out);
     
 }

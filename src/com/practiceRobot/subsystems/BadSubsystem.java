@@ -18,10 +18,25 @@ public abstract class BadSubsystem extends Subsystem implements Logger
         initialize();
     }
     
+    /**
+     * Subsystems should overwrite this method. 
+     * This is used to instantiate any hardware. 
+     * Specific to each class.
+     */
     protected abstract void initialize();
     
+    /**
+     * @return whatever string you want. Probably gonna be
+     * the name of the class that calls this.
+     */
     public abstract String getConsoleIdentity();
     
+    /**
+     * Print stuff into the console. The getConsoleIdentity()
+     * will probably return the name of the class that is
+     * calling this.
+     * @param out whatever you want to say
+     */
     public void log(String out)
     {
         System.out.println(getConsoleIdentity() + ":" + out);

@@ -1,6 +1,7 @@
 
 package edu.wpi.first.wpilibj.templates;
 
+import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.Button;
 import edu.wpi.first.wpilibj.buttons.DigitalIOButton;
 
@@ -40,5 +41,37 @@ public class OI {
     // Start the command when the button is released  and let it run the command
     // until it is finished as determined by it's isFinished method.
     // button.whenReleased(new ExampleCommand());
+    
+    public static Joystick xBox;
+    private static int joyPort = 1;
+    
+    public static int leftStickX = 1, leftStickY = 2, rightStickX = 3, rightStickY = 5,
+            xButton = 3, yButton = 4, bButton = 2, aButton = 1, rightButton = 6, leftButton = 5;
+    
+    
+    public void init()
+    {
+        xBox = new Joystick(joyPort);
+    }
+    
+    public double leftStickX()
+    {
+        return xBox.getRawAxis(leftStickX);
+    }
+    
+    public double leftStickY()
+    {
+        return xBox.getRawAxis(leftStickY);
+    }
+    
+    public double rightStickX()
+    {
+        return xBox.getRawAxis(rightStickX);
+    }
+    
+    public double rightStickY()
+    {
+        return xBox.getRawAxis(rightStickY);
+    }
 }
 

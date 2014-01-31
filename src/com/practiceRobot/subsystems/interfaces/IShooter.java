@@ -10,5 +10,5 @@ package com.practiceRobot.subsystems.interfaces;
  */
 public interface IShooter 
 {
-    
+    public void setSpeed(double speed);
 }

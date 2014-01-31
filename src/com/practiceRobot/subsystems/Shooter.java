@@ -15,7 +15,8 @@ import edu.wpi.first.wpilibj.Talon;
  */
 public class Shooter extends BadSubsystem implements IShooter
 {
-    private SpeedController controller;
+    private SpeedController controller1;
+    private SpeedController controller2;
     private static Shooter instance;
     
     public Shooter getInstance()
@@ -30,7 +31,8 @@ public class Shooter extends BadSubsystem implements IShooter
     
     private Shooter()
     {
-        controller = new Talon(RobotMap.shooterSpeedPort);
+        controller1 = new Talon(RobotMap.shooterSpeedPort);
+        controller2 = new Talon(RobotMap.shooterSpeedPort);
     }
     
     protected void initialize() 
@@ -48,7 +50,8 @@ public class Shooter extends BadSubsystem implements IShooter
 
     public void setSpeed(double speed) 
     {
-        controller.set(speed);
+        controller1.set(speed);
+        controller2.set(speed);
     }
     
 }

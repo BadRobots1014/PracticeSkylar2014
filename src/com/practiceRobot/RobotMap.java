@@ -17,6 +17,8 @@ public class RobotMap {
     // public static final int rangefinderPort = 1;
     // public static final int rangefinderModule = 1;
     
-    public static final int shooterSpeedPort = 0; // CHANGE THESE
-    public static final int winchPort = 0; // OR ELSE
+    public static final int shooterBackSpeedPort = 0; // CHANGE THESE
+    public static final int shooterFrontSpeedPort = 0; // EVENTUALLY
+    public static final int frisbeePusherPort = 0;
+    public static final int winchPort = 0;
 }

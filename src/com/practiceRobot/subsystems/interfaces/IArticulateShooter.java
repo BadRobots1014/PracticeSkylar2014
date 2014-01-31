@@ -14,4 +14,6 @@ public interface IArticulateShooter
     
     public void lowerShooter();
     
+    public void moveShooter(double speed);
+    
 }

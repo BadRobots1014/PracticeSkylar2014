@@ -4,7 +4,10 @@
  */
 package com.practiceRobot.subsystems;
 
+import com.practiceRobot.RobotMap;
 import com.practiceRobot.subsystems.interfaces.IShooter;
+import edu.wpi.first.wpilibj.SpeedController;
+import edu.wpi.first.wpilibj.Talon;
 
 /**
  *
@@ -12,7 +15,7 @@ import com.practiceRobot.subsystems.interfaces.IShooter;
  */
 public class Shooter extends BadSubsystem implements IShooter
 {
-
+    private SpeedController controller;
     private static Shooter instance;
     
     public Shooter getInstance()
@@ -23,6 +26,11 @@ public class Shooter extends BadSubsystem implements IShooter
         }
         
         return instance;
+    }
+    
+    private Shooter()
+    {
+        controller = new Talon(RobotMap.shooterSpeedPort);
     }
     
     protected void initialize() 
@@ -36,6 +44,11 @@ public class Shooter extends BadSubsystem implements IShooter
 
     protected void initDefaultCommand() 
     {
+    }
+
+    public void setSpeed(double speed) 
+    {
+        controller.set(speed);
     }
     
 }

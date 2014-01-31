@@ -4,7 +4,6 @@
  */
 package com.practiceRobot.subsystems;
 
-
 import com.practiceRobot.subsystems.interfaces.Logger;
 import edu.wpi.first.wpilibj.command.Subsystem;
 

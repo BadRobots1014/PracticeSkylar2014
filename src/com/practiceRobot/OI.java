@@ -51,7 +51,7 @@ public class OI {
     
     
     
-        public void init()
+    public void init()
     {
         driverStation = DriverStation.getInstance();
         primaryController = new XboxController(1);
